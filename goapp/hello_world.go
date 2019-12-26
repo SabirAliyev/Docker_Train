@@ -21,7 +21,7 @@ func main() {
 	})
 
 	http.HandleFunc("/host/", func(w http.ResponseWriter, r *http.Request) {
-		_, _ = fmt.Fprintf(w, "Host: %s", r.Header.Get("Host"))
+		_, _ = fmt.Fprintf(w, "Host: %s", r.Host)
 	})
 
 	http.HandleFunc("/ip/", func(w http.ResponseWriter, r *http.Request) {
